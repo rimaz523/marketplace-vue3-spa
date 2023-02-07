@@ -1,56 +1,32 @@
-# essentials
+# Online Marketplace Platform Frontend Vue3 SPA
 
-## Project setup
+## Description
 
-```
-# yarn
-yarn
+This is the frontend of a one-stop online marketplace site created with vue js.
 
-# npm
-npm install
+## Technologies & Tools used in the front-end single page web application include:
 
-# pnpm
-pnpm install
-```
+- Vue ^3.2.13
+- Pnpm v7.26.3
+- Node v18.13.0 LTS
 
-### Compiles and hot-reloads for development
+## Installation Instructions
 
-```
-# yarn
-yarn dev
+- Clone the project locally
+- Install dependencies
+    - `pnpm install`
+- Start the application
+    - `pnpm dev`
 
-# npm
-npm run dev
+## Configuring VSCode
 
-# pnpm
-pnpm dev
-```
+- Install the most recent version of VSCode
 
-### Compiles and minifies for production
-
-```
-# yarn
-yarn build
-
-# npm
-npm run build
-
-# pnpm
-pnpm build
-```
-
-### Lints and fixes files
-
-```
-# yarn
-yarn lint
-
-# npm
-npm run lint
-
-# pnpm
-pnpm lint
-```
+## Project Wiki :
+- [General](https://dev.azure.com/rimazmohommed523/Marketplace/_wiki/wikis/Marketplace.wiki/20/Frontend-Vue3-Single-Page-Application)
+- [Architectural Decisions](https://dev.azure.com/rimazmohommed523/Marketplace/_wiki/wikis/Marketplace.wiki/28/Architectural-Decisions)
+- [Known Issues](https://dev.azure.com/rimazmohommed523/Marketplace/_wiki/wikis/Marketplace.wiki/29/Known-Issues)
+- [Installation Instructions](https://dev.azure.com/rimazmohommed523/Marketplace/_wiki/wikis/Marketplace.wiki/30/Installation-Instructions)
 
 ### Customize configuration
 
