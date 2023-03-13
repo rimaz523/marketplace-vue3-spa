@@ -9,20 +9,22 @@ This is the frontend of a one-stop online marketplace site created with vue js.
 - Vue ^3.2.13
 - Pnpm v7.26.3
 - Node v18.13.0 LTS
+- CI/CD using Azure DevOps
 
 ## Installation Instructions
 
 - Clone the project locally
 - Install dependencies
-    - `pnpm install`
+  - `pnpm install`
 - Start the application
-    - `pnpm dev`
+  - `pnpm dev`
 
 ## Configuring VSCode
 
 - Install the most recent version of VSCode
 
 ## Project Wiki :
+
 - [General](https://dev.azure.com/rimazmohommed523/Marketplace/_wiki/wikis/Marketplace.wiki/20/Frontend-Vue3-Single-Page-Application)
 - [Architectural Decisions](https://dev.azure.com/rimazmohommed523/Marketplace/_wiki/wikis/Marketplace.wiki/28/Architectural-Decisions)
 - [Known Issues](https://dev.azure.com/rimazmohommed523/Marketplace/_wiki/wikis/Marketplace.wiki/29/Known-Issues)
