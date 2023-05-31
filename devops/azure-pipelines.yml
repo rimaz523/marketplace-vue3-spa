@@ -5,6 +5,8 @@ trigger:
 
 variables:
   - template: variables/build.yml
+  - template: variables/dev.yml
+  - template: variables/service-connections.yml
 
 stages:
   - stage: 'Build'
@@ -20,10 +22,8 @@ stages:
             inputs:
               versionSpec: '$(nodeVersion)'
             displayName: 'Install Node.js'
-
-          - script: 'npm install -g pnpm'
+          - script: 'npm install -g pnpm@7.26.3'
             displayName: 'Install PNPM'
-
           - script: |
               pnpm install
             displayName: 'Initialize project'
@@ -36,7 +36,6 @@ stages:
               contents: '**/*'
               targetFolder: '$(Build.ArtifactStagingDirectory)'
               cleanTargetFolder: true
-
           - task: ArchiveFiles@2
             inputs:
               rootFolderOrFile: '$(Build.ArtifactStagingDirectory)'
@@ -44,8 +43,27 @@ stages:
               archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
               includeRootFolder: false
               replaceExistingArchive: true
-
           - task: PublishBuildArtifacts@1
             displayName: 'Publish Artifact: drop'
             inputs:
               pathtoPublish: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
+
+  - stage: 'Deploy_Dev'
+    displayName: 'Deploy to Dev'
+    jobs:
+      - deployment: 'Deploy'
+        displayName: 'Deploy job'
+        environment: DEV
+        strategy:
+          runOnce:
+            deploy:
+              steps:
+                - download: current
+                  artifact: drop
+                - task: AzureWebApp@1
+                  displayName: 'Deploy vue3 front-end webapp to azure app service'
+                  inputs:
+                    azureSubscription: '$(managedIdentityName)'
+                    appName: '$(project)-$(environment)-$(webAppName)'
+                    appType: 'webAppLinux'
+                    package: '$(Pipeline.Workspace)/drop/$(Build.BuildId).zip'
