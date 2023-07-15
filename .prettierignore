@@ -1,0 +1,8 @@
+# Ignore public content
+public
+
+#Ignore devops
+devops
+
+dist
+node_modules
