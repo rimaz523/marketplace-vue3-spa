@@ -7,7 +7,7 @@ specifiers:
   eslint: ^8.22.0
   eslint-plugin-vue: ^9.3.0
   pinia: ^2.0.23
-  prettier: 2.8.4
+  prettier: 3.0.0
   roboto-fontface: '*'
   sass: ^1.55.0
   vite: ^3.1.9
@@ -31,7 +31,7 @@ devDependencies:
   '@vitejs/plugin-vue': 3.2.0_vite@3.2.5+vue@3.2.47
   eslint: 8.33.0
   eslint-plugin-vue: 9.9.0_eslint@8.33.0
-  prettier: 2.8.4
+  prettier: 3.0.0
   sass: 1.58.0
   vite: 3.2.5_sass@1.58.0
   vite-plugin-vuetify: 1.0.2_5l7bqsqk7alz2yhl3ybf2nsxzm
@@ -1132,9 +1132,9 @@ packages:
     engines: {node: '>= 0.8.0'}
     dev: true
 
-  /prettier/2.8.4:
-    resolution: {integrity: sha512-vIS4Rlc2FNh0BySk3Wkd6xmwxB0FpOndW5fisM5H8hsZSxU2VWVB5CWIkIjWvrHjIhxk2g3bfMKM87zNTrZddw==}
-    engines: {node: '>=10.13.0'}
+  /prettier/3.0.0:
+    resolution: {integrity: sha512-zBf5eHpwHOGPC47h0zrPyNn+eAEIdEzfywMoYn2XPi0P44Zp0tSq64rq0xAREh4auw2cJZHo9QUob+NqCQky4g==}
+    engines: {node: '>=14'}
     hasBin: true
     dev: true
 
