@@ -1,0 +1,8 @@
+# Ignore public and devops dirs
+public
+devops
+
+# Ignore node modules and config files/dirs
+node_modules
+.vscode
+.gitignore
